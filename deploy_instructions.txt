@@ -1,0 +1,53 @@
+PYTHONANYWHERE GA QAYTA TASHLASH KO'RSATMALARI
+===============================================
+
+1. PYTHONANYWHERE DA:
+   - Eski loyihani o'chirib tashlang
+   - Yangi Web app yarating (Django)
+   - Files tab da yangi papka yarating: /home/yourusername/instagram
+
+2. FAYLLARNI YUKLASH:
+   - Barcha fayllarni /home/yourusername/instagram papkasiga yuklang
+   - app/ papkasi
+   - project/ papkasi  
+   - manage.py
+   - requirements.txt
+   - wsgi.py
+   - README.md
+
+3. KONSOL DA ISHLATISH:
+   cd /home/yourusername/instagram
+   pip install -r requirements.txt
+   python manage.py migrate
+   python manage.py collectstatic
+   python manage.py createsuperuser
+
+4. WEB APP SOZLASH:
+   - Web tab ga o'ting
+   - Source code: /home/yourusername/instagram
+   - Working directory: /home/yourusername/instagram
+   - WSGI configuration file ni oching va quyidagini yozing:
+
+import os
+import sys
+
+path = '/home/yourusername/instagram'
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+
+5. RELOAD:
+   - "Reload" tugmasini bosing
+
+6. TEKSHIRISH:
+   - yourusername.pythonanywhere.com ga o'ting
+   - Admin panel: yourusername.pythonanywhere.com/admin/
+
+MUHIM ESLATMA:
+- yourusername o'rniga o'zingizning username yozing
+- Barcha fayllar to'g'ri joyda bo'lishi kerak
+- Error log ni tekshiring agar xatolik bo'lsa 
